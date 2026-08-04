@@ -1,13 +1,17 @@
-# mcp-nsf-awards
+# @pipeworx/nsf-awards
 
-NSF Awards MCP — National Science Foundation award database (free, no auth)
+NSF Award Search MCP — National Science Foundation grant database, no auth.
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 673+ live data sources.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1394+ live data sources.
 
 ## Tools
 
-| Tool | Description |
-|------|-------------|
+- `search_awards(keyword?, pi_name?, awardee?, program?, state?, country?, date_start?, date_end?, limit?, offset?)` — filter NSF awards.
+- `get_award(award_id)` — full record with abstract + outcomes report.
+
+## Data source
+
+`https://api.nsf.gov/services/v1/awards.json` — public, no key required, capped at 25 results per request.
 
 ## Quick Start
 
@@ -23,7 +27,7 @@ Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 }
 ```
 
-Or connect to the full Pipeworx gateway for access to all 673+ data sources:
+Or connect to the full Pipeworx gateway for access to all 1394+ data sources:
 
 ```json
 {
@@ -47,7 +51,7 @@ The gateway picks the right tool and fills the arguments automatically.
 
 ## More
 
-- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [Docs and guides](https://pipeworx.io/docs)
 - [pipeworx.io](https://pipeworx.io)
 
 ## License
