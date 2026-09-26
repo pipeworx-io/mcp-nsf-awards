@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-nsf-awards",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "NSF Awards MCP — National Science Foundation award database (free, no auth)",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-3a530a8be7603e9b18da9c58bc0c5548ce53c2dc66a826b15666f937c9120609",
-    "sourceCommit": "adb69d997f82a62e8e22b594488c7d04a227db35"
+    "sourceHash": "v1-dc5672dfe40589357a32deed89a652aa0d4fcc9ad385f6cc4dcb7900f49fe1ef",
+    "sourceCommit": "97740c6ee04c8acbfe7dddcacfde9e88ff2b9ca0"
   }
 }
