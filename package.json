@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-nsf-awards",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "NSF Awards MCP — National Science Foundation award database (free, no auth)",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-nsf-awards": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "nsf-awards"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-nsf-awards.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/nsf-awards",
   "pipeworx": {
-    "sourceHash": "v1-0d7264860cf03cba6aa1231e9d48cf20da25e68ee0b63cbc6b108ae14d902cf1",
-    "sourceCommit": "774de7f685a75e02d0b828d24a7b94794102152c"
+    "mode": "gateway",
+    "slug": "nsf-awards",
+    "gatewaySlug": "nsf-awards",
+    "sourceHash": "v1-867a7a68ff2a2b1da9907e7ef93b2d3a034ca9067a6ff55d9770500c8cc58d30",
+    "sourceCommit": "b2c4383545bb35171d0ada2beb1c9c7168ea175e"
   }
 }

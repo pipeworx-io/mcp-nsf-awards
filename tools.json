@@ -1,0 +1,68 @@
+[
+  {
+    "name": "search_awards",
+    "description": "Search NSF awards. Filter by keyword (matches title/abstract), PI name, awardee institution, NSF program, date range, US state, or country. Returns title, PI, awardee, amount, dates, program. Use get_award for full abstract + outcomes report.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "keyword": {
+          "type": "string",
+          "description": "Search term (title + abstract)"
+        },
+        "pi_name": {
+          "type": "string",
+          "description": "PI full or last name"
+        },
+        "awardee": {
+          "type": "string",
+          "description": "Awardee institution name"
+        },
+        "program": {
+          "type": "string",
+          "description": "NSF program name (e.g., \"Algorithms in the Field\")"
+        },
+        "state": {
+          "type": "string",
+          "description": "Awardee US state code (e.g., \"CA\")"
+        },
+        "country": {
+          "type": "string",
+          "description": "Awardee country code (e.g., \"US\")"
+        },
+        "date_start": {
+          "type": "string",
+          "description": "Award start date >= MM/DD/YYYY"
+        },
+        "date_end": {
+          "type": "string",
+          "description": "Award start date <= MM/DD/YYYY"
+        },
+        "limit": {
+          "type": "number",
+          "description": "Results per page (1-25, default 25 — NSF max)"
+        },
+        "offset": {
+          "type": "number",
+          "description": "Pagination offset (default 1)"
+        }
+      },
+      "required": []
+    }
+  },
+  {
+    "name": "get_award",
+    "description": "Fetch a single NSF award by ID. Returns full abstract, project outcomes report (if completed), and detailed PI/awardee info.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "award_id": {
+          "type": "string",
+          "description": "NSF award ID (numeric string)"
+        }
+      },
+      "required": [
+        "award_id"
+      ]
+    }
+  }
+]
